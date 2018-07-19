@@ -1,5 +1,5 @@
 $(document).ready(function (){
-$.get( "index.html", function( results ) {
+$.get( "https://api.github.com/search/repositories", function( results ) {
   $( ".searchTerms" ).html( results );
   alert( "Load was performed." );
 });
