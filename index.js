@@ -32,7 +32,7 @@ function showCommits(el) {
      // This is called when an error occurs
      console.log("I'm sorry, there's been an error. Please try again.");
      });
-     })
+     }
 
 
 function displayCommits() {
