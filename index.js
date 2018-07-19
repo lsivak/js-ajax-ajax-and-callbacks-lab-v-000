@@ -11,3 +11,9 @@ displayError();
 console.log("I'm sorry, there's been an error. Please try again.");
 });
 })
+
+function showRepositories(event, data) {
+  const repos = JSON.parse(this.responseText)
+   const repoList = `<ul>${repos.map(r => '<li><a href="' + r.html_url + '">' + r.name + '</a> <a href="#" data-repository="' + r.name + '" onclick="getCommits(this)">Get Commits</a></li>').join('')}</ul>`
+  document.getElementById("repositories").innerHTML = repoList
+}
