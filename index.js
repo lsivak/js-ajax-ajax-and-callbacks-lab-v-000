@@ -5,9 +5,8 @@ const searchTerms = $('#searchTerms').val()
 $.get(`https://api.github.com/search/repositories?q=${searchTerms}`, function( data) {
   $( "#results" ).html( data );
   alert( "Load was performed." );
-
-displayError();
 }).fail(function(error) {
+  displayError()
 // This is called when an error occurs
 console.log("I'm sorry, there's been an error. Please try again.");
 });
