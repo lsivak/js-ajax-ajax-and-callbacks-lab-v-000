@@ -3,7 +3,7 @@ $(document).ready(function (){
 const searchRepositories = () => {
 const searchTerms = $('#searchTerms').val()
 
-$.get(`https://api.github.com/search/repositories?q=${searchTerms}`, function( results ) {
+$.get(`https://api.github.com/search/repositories?q=${searchTerms}`, function( results) {
   $( "#searchTerms" ).html( results );
   alert( "Load was performed." );
 
