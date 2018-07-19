@@ -3,8 +3,8 @@ $(document).ready(function (){
 function searchRepositories() {
 const searchTerms = $('#searchTerms').val()
 
-$.get(`https://api.github.com/search/repositories?q=${searchTerms}`, function( results) {
-  $( "#searchTerms" ).html( results );
+$.get(`https://api.github.com/search/repositories?q=${searchTerms}`, function( data) {
+  $( "#results" ).html( data );
   alert( "Load was performed." );
 
 displayError();
@@ -23,8 +23,8 @@ function showRepositories() {
 }
 
 function showCommits(el) {
-   $.get(`https://api.github.com/repos/${el.dataset.owner}/${el.dataset.repository}/commits`, function (results) {
-     $( "#details" ).html( results );
+   $.get(`https://api.github.com/repos/${el.dataset.owner}/${el.dataset.repository}/commits`, function (data) {
+     $( "#details" ).html( data );
      displayError();
      }).fail(function(error) {
      // This is called when an error occurs
