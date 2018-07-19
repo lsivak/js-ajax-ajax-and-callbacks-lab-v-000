@@ -1,10 +1,9 @@
 const expect = require('expect')
-const sinon = require('sinon')
 
 const fs = require('fs')
 const jsdom = require('mocha-jsdom')
 const path = require('path')
-
+var sinon = require('sinon')
 
 describe('index.js', () => {
   const html = fs.readFileSync(path.resolve(__dirname, '..', 'index.html'), 'utf-8')
