@@ -1,3 +1,4 @@
+$(document).ready(function (){
 $.get( "index.html", function( results ) {
   $( ".searchTerms" ).html( results );
   alert( "Load was performed." );
@@ -9,3 +10,4 @@ displayError();
 // This is called when an error occurs
 console.log("I'm sorry, there's been an error. Please try again.");
 });
+}
