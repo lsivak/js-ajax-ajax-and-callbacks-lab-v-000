@@ -5,6 +5,7 @@ $.get(`https://api.github.com/search/repositories?q=${searchTerms}`, function( r
   $( "#searchTerms" ).html( results );
   alert( "Load was performed." );
 });
+debugger
 $.get("error", function(data) {
 // This will not be called because the .html file request doesn't exist
 displayError();
