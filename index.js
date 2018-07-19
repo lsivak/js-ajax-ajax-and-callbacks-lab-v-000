@@ -1,5 +1,5 @@
 $(document).ready(function (){
-$.get( "https://api.github.com", function( results ) {
+$.get( "https://api.github.com/repos/octocat", function( results ) {
   $( ".searchTerms" ).html( results );
   alert( "Load was performed." );
 });
