@@ -1,5 +1,4 @@
-$(document).ready(function (){
-});
+
 function searchRepositories() {
 const searchTerms = $('#searchTerms').val()
 
@@ -39,3 +38,5 @@ function displayCommits() {
   document.getElementById("details").innerHTML = commitsList
 
 }
+$(document).ready(function (){
+});
