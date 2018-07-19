@@ -1,6 +1,6 @@
 
-const expect = require('expect')
-const sinon = require('sinon')
+global.expect = require('expect')
+global.sinon = require('sinon')
 
 const fs = require('fs')
 const jsdom = require('mocha-jsdom')
