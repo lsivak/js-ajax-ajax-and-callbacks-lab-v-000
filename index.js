@@ -1,4 +1,4 @@
-
+const searchRepositories = () => {
 const searchTerms = $('#searchTerms')
 $(document).ready(function (){
 $.get(`https://api.github.com/search/repositories?q=${searchTerms}`, function( results ) {
@@ -13,6 +13,7 @@ displayError();
 console.log("I'm sorry, there's been an error. Please try again.");
 });
 })
+}
 
 function showRepositories(event, data) {
   const repos = JSON.parse(this.responseText)
