@@ -28,7 +28,7 @@
         <a href="#" onclick="searchRepositories()">Search Repositories</a>
         <h3>Repositories</h3>
         <div id="results"></div>
-          <h2><a href="{{html_url}}">{{name}}</a></h2>      
+          <h2><a href="{html_url}">{name}</a></h2>
              <p>Description: {{description}}</p>
           <header><h4>Created By {{login}}</h4></header>
         <img src="{{avatar_url}}" height="32" width="32">
@@ -38,7 +38,6 @@
         <div id="details"></div>
       </div>
     </div>
-    <script src="jsdom/lib/old-api"></script>
     <script src="jquery-3.1.0.min.js"></script>
     <script src="index.js"></script>
   </body>
