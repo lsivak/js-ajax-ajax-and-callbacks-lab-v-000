@@ -15,7 +15,10 @@ describe('index.js', () => {
   ]
 
   let $
-  jsdom({ html, scripts })
+  jsdom({
+  src: fs.readFileSync(path.resolve(__dirname, '..', 'index.js'), 'utf-8'),
+  html: fs.readFileSync(path.resolve(__dirname, '..', 'index.html'), 'utf-8')
+})
 
   before(() => {
     window.$ = require('jquery')
