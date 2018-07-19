@@ -1,4 +1,5 @@
-expect = require('expect')
+global.require
+const expect = require('expect')
 
 const fs = require('fs')
 const jsdom = require('mocha-jsdom')
