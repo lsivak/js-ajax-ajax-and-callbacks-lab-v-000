@@ -1,4 +1,4 @@
-$.get( "https://api.github.com/", function( results ) {
+$.get( "index.html", function( results ) {
   $( ".searchTerms" ).html( results );
   alert( "Load was performed." );
 });
