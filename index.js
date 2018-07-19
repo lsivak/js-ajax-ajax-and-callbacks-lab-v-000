@@ -25,7 +25,7 @@ function resultsData() {
 }
 
 function showCommits(el) {
-   $.get(`https://api.github.com/repos/${el.dataset.owner}/${el.dataset.repository}/commits`, function (results) => {
+   $.get(`https://api.github.com/repos/${el.dataset.owner}/${el.dataset.repository}/commits`, function (results) {
      $( "#details" ).html( results );
      displayError();
      }).fail(function(error) {
