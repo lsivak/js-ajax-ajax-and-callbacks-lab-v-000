@@ -1,4 +1,4 @@
-global.require
+global.require = require
 const expect = require('expect')
 
 const fs = require('fs')
