@@ -13,7 +13,7 @@ displayError();
 console.log("I'm sorry, there's been an error. Please try again.");
 });
 }
-}
+
 
 
 function showRepositories() {
