@@ -18,15 +18,10 @@ console.log("I'm sorry, there's been an error. Please try again.");
 }
 
 
-function resultsData = (results) => {
-  return `
-      <div>
-        <h2><a href="${results.html_url}">${results.name}</a></h2>
-        <p><a href="#" data-repository="${results.name}" data-owner="${results.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
-        <p>${results.description}</p>
-      </div>
-      <hr>
-    `
+function resultsData {
+  const repos = JSON.parse(this.responseText)
+   const repoList = `<ul>${repos.map(r => '<li><a href="' + r.html_url + '">' + r.name + '</a> <a href="#" data-repository="' + r.name + '" onclick="showCommits(this)">Show Commits</a></li>').join('')}</ul>`
+  document.getElementById("repositories").innerHTML = repoList
 }
 
 function getCommits(el) {
